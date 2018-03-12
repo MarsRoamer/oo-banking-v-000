@@ -15,9 +15,13 @@ require 'pry'
   end
 
   def execute_transaction
-    @sender.balance -= @amount
-    @receiver.balance += @amount
-    @status = 'complete'
+    i = 0
+    while i < 1
+      @sender.balance -= @amount
+      @receiver.balance += @amount
+      @status = 'complete'
+      i += 1
+    end
 
   end
 
