@@ -15,13 +15,16 @@ require 'pry'
   end
 
   def execute_transaction
-    i = 0
-    while i < 1
+
+    if valid?
       @sender.balance -= @amount
       @receiver.balance += @amount
       @status = 'complete'
-      i += 1
+    else
+      "Transaction rejected. Please check your account balance."
     end
+    
+  
 
   end
 
