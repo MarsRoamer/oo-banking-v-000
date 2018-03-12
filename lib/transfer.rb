@@ -16,7 +16,7 @@ class Transfer
 
   def execute_transaction
 
-    if !@sender.valid? 
+    if !@sender.valid?
       reject_transfer
 
 
