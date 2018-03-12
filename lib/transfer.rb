@@ -31,8 +31,8 @@ require 'pry'
 
     def reverse_transfer
       if @status == 'complete'
-        @sender.balance -= @amount
-        @receiver.balance += @amount
+        @sender.balance -= @hodl
+        @receiver.balance += @hodl
       end
     end
 
