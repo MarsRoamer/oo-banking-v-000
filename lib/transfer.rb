@@ -22,7 +22,7 @@ class Transfer
       @hodl = @amount
       @amount = 0
       @status = 'complete'
-      
+
 
 
     else
