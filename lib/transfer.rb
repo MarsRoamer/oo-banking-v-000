@@ -22,8 +22,8 @@ require 'pry'
     else
       @sender.balance -= @amount
       @receiver.balance += @amount
-      @status = 'complete'
       @amount = 0
+      @status = 'complete'
 
     end
 
