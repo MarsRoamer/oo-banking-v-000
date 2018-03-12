@@ -9,6 +9,10 @@ class Transfer
     @status = 'pending'
   end
 
+  def valid?
+    @sender.balance >= @amount && @sender.status == 'open' && @receiver.status == 'open'
+
+  end
 
 
 end
