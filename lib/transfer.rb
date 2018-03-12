@@ -15,9 +15,9 @@ require 'pry'
   end
 
   def execute_transaction
-binding.pry
-    if @sender.valid && @sender.balance >= @amount
 
+    if @sender.valid && @sender.balance >= @amount
+    
       @sender.balance -= @amount
       @receiver.balance += @amount
       @hodl = @amount
