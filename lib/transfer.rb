@@ -33,7 +33,7 @@ require 'pry'
       if @status == 'complete'
         @sender.balance += @hodl
         @receiver.balance -= @hodl
-        @status == 'reversed'
+        @status = 'reversed'
       end
     end
 
