@@ -10,7 +10,7 @@ class Transfer
   end
 
   def valid?
-    @sender.balance >= @amount && @sender.status == 'open' && @receiver.status == 'open'
+    # @sender.balance >= @amount && @sender.status == 'open' && @receiver.status == 'open'
     @sender.valid? && @receiver.valid?
   end
 
