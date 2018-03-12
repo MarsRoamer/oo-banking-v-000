@@ -20,7 +20,7 @@ class Transfer
       @sender.balance -= @amount
       @receiver.balance += @amount
       @hodl = @amount
-      @amount = 0
+      # @amount = 0
       @status = 'complete'
 
 
