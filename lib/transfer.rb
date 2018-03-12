@@ -16,7 +16,7 @@ require 'pry'
 
   def execute_transaction
 binding.pry
-    if @sender.valid?
+    if @sender.balance <= @amount
       "Transaction rejected. Please check your account balance."
 
 
