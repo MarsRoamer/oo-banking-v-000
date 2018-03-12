@@ -16,16 +16,16 @@ require 'pry'
 
   def execute_transaction
 binding.pry
-    if @sender.balance <= @amount
-      "Transaction rejected. Please check your account balance."
-
-
-    else
+    if @sender.valid && @sender.balance >= @amount
+    
       @sender.balance -= @amount
       @receiver.balance += @amount
       @hodl = @amount
       @amount = 0
       @status = 'complete'
+
+    else
+      "Transaction rejected. Please check your account balance."
 
     end
   end
