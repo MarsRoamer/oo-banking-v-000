@@ -1,5 +1,5 @@
 class Transfer
-
+require 'pry'
   attr_accessor :sender, :receiver, :amount, :status
 
   def initialize(sender, receiver, amount)
@@ -17,6 +17,7 @@ class Transfer
   def execute_transaction
     @sender.balance - @amount
     @receiver.balance + @amount
+    binding.pry
   end
 
 
