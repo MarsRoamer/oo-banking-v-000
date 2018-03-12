@@ -16,7 +16,7 @@ require 'pry'
 
   def execute_transaction
 
-    if @sender.valid? == false
+    if !self.valid?
       "Transaction rejected. Please check your account balance."
 
     else
