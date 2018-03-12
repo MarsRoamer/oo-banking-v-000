@@ -20,6 +20,7 @@ require 'pry'
       @sender.balance -= @amount
       @receiver.balance += @amount
       @status = 'complete'
+      @amount = 0
     else
       "Transaction rejected. Please check your account balance."
     end
