@@ -16,16 +16,17 @@ class Transfer
 
   def execute_transaction
 
-    if !valid?
-      reject_transfer
-
-
-    else
+    if valid? && @sender.balance >= amount
       @sender.balance -= @amount
       @receiver.balance += @amount
       @hodl = @amount
       @amount = 0
       @status = 'complete'
+      
+
+
+    else
+      reject_transfer
 
     end
   end
